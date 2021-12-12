@@ -228,9 +228,24 @@ namespace DresserUI
             // numericUpDown5
             // 
             this.numericUpDown5.Location = new System.Drawing.Point(164, 122);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown5.TabIndex = 13;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // label10
             // 
@@ -253,6 +268,10 @@ namespace DresserUI
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Квадратная",
+            "Трапеция",
+            "Округлая"});
             this.comboBox1.Location = new System.Drawing.Point(164, 150);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(117, 21);
@@ -266,6 +285,7 @@ namespace DresserUI
             this.button1.TabIndex = 17;
             this.button1.Text = "Открыть чертеж";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonOpenDrawing_Click);
             // 
             // button2
             // 
@@ -275,6 +295,7 @@ namespace DresserUI
             this.button2.TabIndex = 18;
             this.button2.Text = "Построить модель\r\n\r\n";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonBuild_Click);
             // 
             // MainForm
             // 
