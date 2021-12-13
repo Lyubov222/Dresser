@@ -35,5 +35,24 @@ namespace DresserUI
                 //...
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dressCloserTypeCombobox = (ComboBox)sender;
+            DressCloserType dressCloserType;
+            switch (dressCloserTypeCombobox.SelectedItem)
+            {
+                case "Квадратная":
+                {
+                    dressCloserType = DressCloserType.Square;
+                    break;
+                }
+                case "Округлая":
+                {
+                    dressCloserType = DressCloserType.Circle;
+                    break;
+                }
+            }
+        }
     }
 }

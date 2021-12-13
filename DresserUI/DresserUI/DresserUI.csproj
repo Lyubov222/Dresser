@@ -52,6 +52,7 @@
     <Compile Include="Drawing.Designer.cs">
       <DependentUpon>Drawing.cs</DependentUpon>
     </Compile>
+    <Compile Include="DressCloserType.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
