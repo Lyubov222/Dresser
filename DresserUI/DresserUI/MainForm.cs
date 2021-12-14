@@ -19,7 +19,7 @@ namespace DresserUI
 
         private void buttonOpenDrawing_Click(object sender, EventArgs e)
         {
-            Drawing drawing = new Drawing();
+            Drawing drawing = new Drawing(); 
             drawing.Show();
         } 
 
@@ -42,11 +42,17 @@ namespace DresserUI
             DressCloserType dressCloserType;
             switch (dressCloserTypeCombobox.SelectedItem)
             {
-                case "Квадратная":
+                case "Прямоугольная":
                 {
-                    dressCloserType = DressCloserType.Square;
+                    dressCloserType = DressCloserType.Rectangle;
                     break;
                 }
+                case "Трапеция":
+                {
+                    dressCloserType = DressCloserType.Trapezoid;
+                    break;
+                }
+
                 case "Округлая":
                 {
                     dressCloserType = DressCloserType.Circle;

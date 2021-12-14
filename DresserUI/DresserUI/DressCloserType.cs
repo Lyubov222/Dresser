@@ -2,7 +2,8 @@
 {
     public enum DressCloserType
     {
-        Square,
+        Rectangle,
+        Trapezoid,
         Circle
     }
 }

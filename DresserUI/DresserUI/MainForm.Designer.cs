@@ -59,17 +59,15 @@ namespace DresserUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(21, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Длина ящика:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(246, 20);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericUpDown1.Location = new System.Drawing.Point(164, 13);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -81,7 +79,7 @@ namespace DresserUI
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.Value = new decimal(new int[] {
             1000,
@@ -92,27 +90,24 @@ namespace DresserUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(243, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 20);
+            this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "от 1000 до 5000 мм";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(21, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ширина ящика:";
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(246, 62);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericUpDown2.Location = new System.Drawing.Point(164, 40);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             800,
             0,
@@ -124,7 +119,7 @@ namespace DresserUI
             0,
             0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown2.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown2.TabIndex = 4;
             this.numericUpDown2.Value = new decimal(new int[] {
             400,
@@ -135,27 +130,24 @@ namespace DresserUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(364, 65);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(243, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 20);
+            this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "от 400 до 800 мм";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 105);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(21, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 20);
+            this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Высота комода:";
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(246, 102);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericUpDown3.Location = new System.Drawing.Point(164, 66);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             1524,
             0,
@@ -167,7 +159,7 @@ namespace DresserUI
             0,
             0});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown3.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown3.TabIndex = 7;
             this.numericUpDown3.Value = new decimal(new int[] {
             700,
@@ -178,27 +170,24 @@ namespace DresserUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(364, 105);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(243, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 20);
+            this.label6.Size = new System.Drawing.Size(100, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "от 700 до 1524 мм";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 146);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(21, 95);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 20);
+            this.label7.Size = new System.Drawing.Size(90, 13);
             this.label7.TabIndex = 9;
             this.label7.Text = "Ширина комода:";
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(246, 143);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericUpDown4.Location = new System.Drawing.Point(164, 93);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             550,
             0,
@@ -210,7 +199,7 @@ namespace DresserUI
             0,
             0});
             this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown4.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown4.TabIndex = 10;
             this.numericUpDown4.Value = new decimal(new int[] {
             450,
@@ -221,27 +210,24 @@ namespace DresserUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(364, 146);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(243, 95);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 20);
+            this.label8.Size = new System.Drawing.Size(94, 13);
             this.label8.TabIndex = 11;
             this.label8.Text = "от 450 до 550 мм";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 191);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(21, 124);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(165, 20);
+            this.label9.Size = new System.Drawing.Size(111, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "Количество ящиков:";
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(246, 188);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.numericUpDown5.Location = new System.Drawing.Point(164, 122);
             this.numericUpDown5.Maximum = new decimal(new int[] {
             7,
             0,
@@ -253,7 +239,7 @@ namespace DresserUI
             0,
             0});
             this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(90, 26);
+            this.numericUpDown5.Size = new System.Drawing.Size(60, 20);
             this.numericUpDown5.TabIndex = 13;
             this.numericUpDown5.Value = new decimal(new int[] {
             3,
@@ -264,20 +250,18 @@ namespace DresserUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(364, 191);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(243, 124);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 20);
+            this.label10.Size = new System.Drawing.Size(67, 13);
             this.label10.TabIndex = 14;
             this.label10.Text = "от 3 до 7 шт";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(34, 235);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(23, 153);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 20);
+            this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 15;
             this.label11.Text = "Форма комода:";
             // 
@@ -285,22 +269,20 @@ namespace DresserUI
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Квадратная",
+            "Прямоугольник",
             "Трапеция",
             "Округлая"});
-            this.comboBox1.Location = new System.Drawing.Point(246, 231);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox1.Location = new System.Drawing.Point(164, 150);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 28);
+            this.comboBox1.Size = new System.Drawing.Size(117, 21);
             this.comboBox1.TabIndex = 16;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 289);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(26, 188);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 35);
+            this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 17;
             this.button1.Text = "Открыть чертеж";
             this.button1.UseVisualStyleBackColor = true;
@@ -308,10 +290,9 @@ namespace DresserUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(246, 288);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(164, 187);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 35);
+            this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 18;
             this.button2.Text = "Построить модель\r\n\r\n";
             this.button2.UseVisualStyleBackColor = true;
@@ -319,9 +300,9 @@ namespace DresserUI
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 351);
+            this.ClientSize = new System.Drawing.Size(371, 228);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -342,7 +323,6 @@ namespace DresserUI
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.Text = "Плагин";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
