@@ -28,7 +28,7 @@ namespace DresserUI
             DialogResult dialogResult = MessageBox.Show("Вы уверены что хотите построить модель с данными значениями?", "Внимание!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //....
+                //.... 
             }
             else if (dialogResult == DialogResult.No)
             {
