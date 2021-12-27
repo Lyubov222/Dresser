@@ -19,7 +19,7 @@ namespace DresserUI
 
         private void buttonOpenDrawing_Click(object sender, EventArgs e)
         {
-            Drawing drawing = new Drawing(); 
+            Drawing drawing = new Drawing();  
             drawing.Show();
         } 
 
