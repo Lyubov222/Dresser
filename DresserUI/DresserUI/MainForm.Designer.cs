@@ -267,6 +267,7 @@ namespace DresserUI
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Прямоугольник",
@@ -290,7 +291,7 @@ namespace DresserUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(164, 187);
+            this.button2.Location = new System.Drawing.Point(299, 188);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 23);
             this.button2.TabIndex = 18;
@@ -302,7 +303,7 @@ namespace DresserUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 228);
+            this.ClientSize = new System.Drawing.Size(428, 228);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
