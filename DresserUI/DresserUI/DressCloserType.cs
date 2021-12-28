@@ -1,6 +1,6 @@
 ﻿namespace DresserUI
 {
-    public enum DressCloserType
+    public enum DressCloserType 
     {
         Rectangle, 
         Trapezoid,
