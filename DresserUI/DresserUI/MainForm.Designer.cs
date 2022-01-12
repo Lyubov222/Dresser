@@ -109,7 +109,7 @@ namespace DresserUI
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(164, 40);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            800,
+            500,
             0,
             0,
             0});
@@ -134,7 +134,7 @@ namespace DresserUI
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 5;
-            this.label4.Text = "от 400 до 800 мм";
+            this.label4.Text = "от 400 до 500 мм";
             // 
             // label5
             // 
@@ -297,7 +297,6 @@ namespace DresserUI
             this.button2.TabIndex = 18;
             this.button2.Text = "Построить модель\r\n\r\n";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonBuild_Click);
             // 
             // MainForm
             // 

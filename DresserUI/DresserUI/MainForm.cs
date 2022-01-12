@@ -22,20 +22,6 @@ namespace DresserUI
             Drawing drawing = new Drawing();  
             drawing.Show();
         } 
-
-        private void buttonBuild_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Вы уверены что хотите построить модель с данными значениями?", "Внимание!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //.... 
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //...
-            }
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dressCloserTypeCombobox = (ComboBox)sender;
