@@ -52,7 +52,6 @@
     <Compile Include="Drawing.Designer.cs">
       <DependentUpon>Drawing.cs</DependentUpon>
     </Compile>
-    <Compile Include="DressCloserType.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +96,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="комод-чертеж.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{43e68337-9698-471f-b3e9-c9880d3140ee}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KompasWrapper\KompasWrapper.csproj">
+      <Project>{3bf0af81-637f-47e7-b1c9-522f1d8e727d}</Project>
+      <Name>KompasWrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
