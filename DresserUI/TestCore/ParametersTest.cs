@@ -104,5 +104,30 @@ namespace TestCore
 			Assert.IsTrue(!string.IsNullOrEmpty(parameters.ErrorString),
 				"Строка ошибки пуста");
 		}
+
+		[TestCase(TestName = "Проверка корректного присвоения" +
+							 " значения параметра IsEnableShelves.")]
+		public void TestSetIsEnableShelves_CorrectValue()
+		{
+			var parameters = Parameters;
+
+			Assert.DoesNotThrow((() => parameters.IsEnableShelves = true),
+				"Не присвоилось значение!");
+		}
+
+		[TestCase(TestName = "Проверка корректного получения" +
+		                     " значения параметра IsEnableShelves.")]
+		public void TestGetIsEnableShelves_CorrectValue()
+		{
+			var parameters = Parameters;
+			var expected = true;
+
+			parameters.IsEnableShelves = expected;
+
+			var actual = parameters.IsEnableShelves;
+
+			Assert.AreEqual(expected, actual,
+				"Возвращаемое значение неверное!");
+		}
 	}
 }

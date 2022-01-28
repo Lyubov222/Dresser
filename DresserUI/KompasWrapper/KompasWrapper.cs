@@ -66,11 +66,12 @@ namespace KompasWrapper
 		/// <param name="part"></param>
 		/// <param name="sketch"></param>
 		/// <param name="height"></param>
-		public void BossExtrusion(ksPart part, ksEntity sketch, double height)
+		/// <param name="directionType"></param>
+		public void BossExtrusion(ksPart part, ksEntity sketch, double height, Direction_Type directionType)
 		{
 			ksEntity extrude = part.NewEntity((int)Obj3dType.o3d_bossExtrusion);
 			ksBossExtrusionDefinition extrudeDefinition = extrude.GetDefinition();
-			extrudeDefinition.directionType = (int)Direction_Type.dtNormal;
+			extrudeDefinition.directionType = (short)directionType;
 			extrudeDefinition.SetSketch(sketch);
 			ksExtrusionParam extrudeParam = extrudeDefinition.ExtrusionParam();
 			extrudeParam.depthNormal = height;

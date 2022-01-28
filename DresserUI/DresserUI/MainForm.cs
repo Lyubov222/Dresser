@@ -84,7 +84,7 @@ namespace DresserUI
 
         /// <summary>
         /// Обработчик события нажатия на кнопку "Построить модель"
-        /// </summary>
+        /// </summary> 
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ButtonBuild_Click(object sender, EventArgs e)
@@ -142,5 +142,15 @@ namespace DresserUI
             ErrorTableLayoutPanel.Visible = _parameters.HasError;
             ErrorLabel.Text = _parameters.ErrorString;
         }
+
+        /// <summary>
+        /// Обработчик события переключения чекбокса
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+		private void IsEnableShelvesCheckBox_CheckedChanged(object sender, EventArgs e)
+		{
+			_parameters.IsEnableShelves = IsEnableShelvesCheckBox.Checked;
+		}
 	}
 }

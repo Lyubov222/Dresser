@@ -32,6 +32,11 @@ namespace Core
 		public string ErrorString { get; private set; }
 
 		/// <summary>
+		/// Включение/отключение построения полок
+		/// </summary>
+		public bool IsEnableShelves { get; set; }
+
+		/// <summary>
 		/// Возвращает параметр по перечислению <see cref="ParameterType"/>
 		/// </summary>
 		/// <param name="parameterType">Тип параметра</param>

@@ -86,6 +86,62 @@ namespace KompasWrapper
 			CreateBody();
 			CreateBoxHoles();
 			CreateLegs();
+
+			if (_parameters.IsEnableShelves)
+			{
+				CreateShelves();
+			}
+		}
+
+		/// <summary>
+		/// Создает полки
+		/// </summary>
+		private void CreateShelves()
+		{
+			const int shelvesDistance = 5;
+			var dresserHeight = _parameters.GetValueParameter(
+				ParameterType.DresserHeight);
+			var boxNumber = _parameters.GetValueParameter(
+				ParameterType.BoxNumber);
+			var boxHeight =
+				(dresserHeight - shelvesDistance * (boxNumber + 1))
+				/ boxNumber;
+
+			var halfWidth = _parameters.GetValueParameter(
+				ParameterType.DresserWidth) / 2;
+			ksEntity plane = _kompasWrapper.CreatePlaneOffsetXoz(_part, halfWidth);
+			ksEntity sketch = _part.NewEntity((int)Obj3dType.o3d_sketch);
+			ksSketchDefinition sketchDefinition = sketch.GetDefinition();
+			sketchDefinition.SetPlane(plane);
+			sketch.Create();
+
+			// Входим в режим редактирования эскиза
+			ksDocument2D document2D = sketchDefinition.BeginEdit();
+
+			var point1 = new Point(-_boxLength / 2,
+				-dresserHeight + shelvesDistance);
+			var point2 = new Point(_boxLength / 2,
+				point1.Y + boxHeight);
+			const int radiusHole = 20;
+			var yc = point1.Y + boxHeight / 2;
+			for (int i = 0; i < boxNumber; i++)
+			{
+				CreateRectangle(point1, point2, document2D);
+				document2D.ksEllipse(CreateEllipse(0, yc, 
+					radiusHole, radiusHole, document2D));
+				point1 = new Point(-_boxLength / 2,
+					point2.Y + shelvesDistance);
+				point2 = new Point(_boxLength / 2,
+					point1.Y + boxHeight);
+				yc = point1.Y + 
+				                  boxHeight / 2;
+			}
+
+			sketchDefinition.EndEdit();
+
+			const int widthShelf = 30;
+			_kompasWrapper.BossExtrusion(_part, sketch, widthShelf, 
+				Direction_Type.dtMiddlePlane);
 		}
 
 		/// <summary>
@@ -130,7 +186,7 @@ namespace KompasWrapper
 			sketchDefinition.EndEdit();
 
 			_kompasWrapper.BossExtrusion(_part, sketch, _parameters.GetValueParameter(
-				ParameterType.DresserHeight));
+				ParameterType.DresserHeight), Direction_Type.dtNormal);
 		}
 
 		/// <summary>
@@ -138,18 +194,12 @@ namespace KompasWrapper
 		/// </summary>
 		private void CreateEllipseBody(ksDocument2D document2D)
 		{
-			const int ellipseParamId = 22;
-			ksEllipseParam ellipseParam = _kompasWrapper.KompasObject.GetParamStruct(ellipseParamId);
 			var length = _parameters.GetValueParameter(
 				ParameterType.DresserLength);
 			var width = _parameters.GetValueParameter(
 				ParameterType.DresserWidth);
-			ellipseParam.xc = 0;
-			ellipseParam.yc = 0;
-			ellipseParam.A = length / 2;
-			ellipseParam.B = width / 2;
-			ellipseParam.style = 1;
-			document2D.ksEllipse(ellipseParam);
+			document2D.ksEllipse(CreateEllipse(0, 0,
+				length / 2, width / 2, document2D));
 			
 			// Установка координат для ножек
 			_legPoints.Add(new Point((int)(-0.25 * length),
@@ -298,7 +348,8 @@ namespace KompasWrapper
 			}
 
 			sketchDefinition.EndEdit();
-			_kompasWrapper.BossExtrusion(_part, sketch, -LegsHeight);
+			_kompasWrapper.BossExtrusion(_part, sketch, -LegsHeight,
+				Direction_Type.dtNormal);
 		}
 
 		/// <summary>
@@ -319,6 +370,28 @@ namespace KompasWrapper
 				point1.X + length, point1.Y + width, 1);
 			document2D.ksLineSeg(point1.X, point1.Y,
 				point1.X, point1.Y + width, 1);
+		}
+
+		/// <summary>
+		/// Создает эллипс
+		/// </summary>
+		/// <param name="xc">Х координата центра эллипса</param>
+		/// <param name="yc">Y координата центра эллипса</param>
+		/// <param name="radius1">Первый радиус эллипса</param>
+		/// <param name="radius2">Второй радиус эллипса</param>
+		/// <returns></returns>
+		private ksEllipseParam CreateEllipse(double xc, double yc,
+			double radius1, double radius2, ksDocument2D document2D)
+		{
+			const int ellipseParamId = 22;
+			ksEllipseParam ellipseParam = _kompasWrapper.KompasObject.GetParamStruct(ellipseParamId);
+			ellipseParam.xc = xc;
+			ellipseParam.yc = yc;
+			ellipseParam.A = radius1;
+			ellipseParam.B = radius2;
+			ellipseParam.style = 1;
+			document2D.ksEllipse(ellipseParam);
+			return ellipseParam;
 		}
 	}
 }

@@ -51,6 +51,7 @@ namespace DresserUI
 			this.button2 = new System.Windows.Forms.Button();
 			this.ErrorLabel = new System.Windows.Forms.Label();
 			this.ErrorTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+			this.IsEnableShelvesCheckBox = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.DresserLengthNumericUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BoxWidthNumericUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.DresserHeightNumericUpDown)).BeginInit();
@@ -335,11 +336,23 @@ namespace DresserUI
 			this.ErrorTableLayoutPanel.TabIndex = 19;
 			this.ErrorTableLayoutPanel.Visible = false;
 			// 
+			// IsEnableShelvesCheckBox
+			// 
+			this.IsEnableShelvesCheckBox.AutoSize = true;
+			this.IsEnableShelvesCheckBox.Location = new System.Drawing.Point(299, 152);
+			this.IsEnableShelvesCheckBox.Name = "IsEnableShelvesCheckBox";
+			this.IsEnableShelvesCheckBox.Size = new System.Drawing.Size(113, 17);
+			this.IsEnableShelvesCheckBox.TabIndex = 20;
+			this.IsEnableShelvesCheckBox.Text = "Построить полки";
+			this.IsEnableShelvesCheckBox.UseVisualStyleBackColor = true;
+			this.IsEnableShelvesCheckBox.CheckedChanged += new System.EventHandler(this.IsEnableShelvesCheckBox_CheckedChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(428, 240);
+			this.Controls.Add(this.IsEnableShelvesCheckBox);
 			this.Controls.Add(this.ErrorTableLayoutPanel);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
@@ -401,6 +414,7 @@ namespace DresserUI
         private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Label ErrorLabel;
 		private System.Windows.Forms.TableLayoutPanel ErrorTableLayoutPanel;
+		private System.Windows.Forms.CheckBox IsEnableShelvesCheckBox;
 	}
 }
 
