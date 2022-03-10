@@ -16,12 +16,12 @@ namespace StressTest
 		static void Main(string[] args)
 		{
 			var builder = new DresserBuilder();
-			var stopWatch = new Stopwatch();
-			stopWatch.Start();
-			var parameters = new Parameters();
+            var stopWatch = new Stopwatch();
+            var parameters = new Parameters();
 			var streamWriter = new StreamWriter("log.txt", true);
-			var count = 0;
+            var count = 0;
 			const double fromBitsToGigabytes = 0.000000000931322574615478515625;
+            stopWatch.Start();
 			while (true)
 			{
 				builder.Build(parameters);
@@ -30,8 +30,8 @@ namespace StressTest
 				                 fromBitsToGigabytes;
 				streamWriter.WriteLine(
 					$"{++count}\t{stopWatch.Elapsed:hh\\:mm\\:ss}\t{usedMemory}");
-				streamWriter.Flush();
-			}
+				//streamWriter.Flush();
+            }
 		}
 	}
 }

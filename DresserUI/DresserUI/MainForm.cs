@@ -84,7 +84,7 @@ namespace DresserUI
 
         /// <summary>
         /// Обработчик события нажатия на кнопку "Построить модель"
-        /// </summary> 
+        /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ButtonBuild_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace DresserUI
         private void DresserShapeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dressCloserTypeCombobox = (ComboBox)sender;
-            _parameters.SetValueParameter(ParameterType.DresserShape,
+            _parameters.SetValueParameter(ParameterType.DresserShape, 
 	            dressCloserTypeCombobox.SelectedIndex);
         }
 
@@ -152,5 +152,6 @@ namespace DresserUI
 		{
 			_parameters.IsEnableShelves = IsEnableShelvesCheckBox.Checked;
 		}
-	}
+
+    }
 }
